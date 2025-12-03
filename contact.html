@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Smart Cocoa Fermentation Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo-section">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='50' rx='35' ry='50' fill='%23D4A574'/%3E%3Cpath d='M35 30 Q50 20 65 30' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3Cpath d='M35 45 Q50 35 65 45' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3Cpath d='M35 60 Q50 50 65 60' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3C/svg%3E" alt="Logo" class="nav-logo">
+                    <span class="brand-name">SmartCocoa</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="analysis.html" class="nav-link">Analisis</a></li>
+                    <li><a href="contact.html" class="nav-link active">Kontak</a></li>
+                    <li><a href="about.html" class="nav-link">Tentang</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <header>
+            <div class="header-content">
+                <h1>Hubungi Kami</h1>
+            </div>
+            <p class="subtitle">Kirimkan pertanyaan atau feedback Anda</p>
+        </header>
+
+        <main>
+            <div class="contact-wrapper">
+                <div class="contact-info-section">
+                    <h2>Informasi Kontak</h2>
+                    <div class="contact-info-grid">
+                        <div class="contact-info-card">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h3>Alamat</h3>
+                                <p>Kampus IPB Darmaga<br>Jl. Lingkar Akademik<br>Babakan, Kec. Dramaga, Kabupaten Bogor, Jawa Barat 16680</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="info-icon">📞</div>
+                            <div class="info-content">
+                                <h3>Telepon</h3>
+                                <p>+62 896-0105-9832<br>+62 889-7139-9666, +62 856-4133-7500<br>Tersedia 07:00 - 17:00 WIB</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="info-icon">✉️</div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p><a href="mailto:fachriza890drajat@apps.ipb.ac.id">fachriza890drajat@apps.ipb.ac.id</a><br><a href="mailto:support@smartcocoa.id">support@smartcocoa.id</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="info-icon">🌐</div>
+                            <div class="info-content">
+                                <h3>Media Sosial</h3>
+                                <p><a href="https://www.instagram.com/fachrizadrajat" target="_blank">@fachrizadrajat</a><br><a href="https://www.instagram.com/aryaadinugrahaa" target="_blank">@aryaadinugrahaa</a><br><a href="https://www.instagram.com/_adammau" target="_blank">@_adammau</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>Kirim Pesan</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">No. Telepon (Opsional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Pilih subjek</option>
+                                <option value="general">Pertanyaan Umum</option>
+                                <option value="technical">Pertanyaan Teknis</option>
+                                <option value="feedback">Umpan Balik</option>
+                                <option value="partnership">Kerjasama</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Saya setuju dengan kebijakan privasi dan syarat penggunaan</label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Kirim Pesan</button>
+                    </form>
+                    <div class="form-message" id="formMessage"></div>
+                </div>
+            </div>
+
+            <section class="faq-section">
+                <h2>Pertanyaan yang Sering Diajukan</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apa itu Smart Cocoa Fermentation Monitor?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Smart Cocoa Fermentation Monitor adalah sistem monitoring real-time yang menggunakan teknologi IoT untuk mengawasi proses fermentasi kakao. Sistem ini mengukur suhu, kelembaban, pH, dan oksigen untuk memastikan kualitas kakao yang optimal.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana cara menggunakan dashboard?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Dashboard menampilkan data real-time dari proses fermentasi. Anda dapat memantau parameter fermentasi, melihat grafik analisis, dan mendapatkan rekomendasi untuk meningkatkan kualitas kakao. Semua informasi diperbarui secara otomatis setiap beberapa detik.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apa parameter yang dipantau sistem?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sistem memantau empat parameter utama: (1) Suhu - untuk mengontrol aktivitas mikroba, (2) Kelembaban - untuk menjaga lingkungan fermentasi, (3) pH Level - untuk memastikan rasa yang tepat, (4) Oksigen - untuk mendukung fermentasi aerobik.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Mengapa hari ke-3 sangat kritis?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Hari ke-3 adalah fase mid-fermentasi di mana aktivitas mikroba mencapai puncaknya. Hal ini menghasilkan panas metabolik yang berlebihan, menyebabkan lonjakan suhu tertinggi. Jika tidak dikontrol, lonjakan ini dapat menurunkan kualitas biji kakao secara signifikan.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apa rekomendasi untuk meningkatkan kualitas?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Rekomendasi utama meliputi: (1) Pembalikan lebih sering pada hari ke-2 dan ke-3, (2) Monitoring intensif setiap 2-3 jam, (3) Ventilasi optimal untuk mengurangi akumulasi panas, (4) Jaga suhu maksimal 45-50°C pada hari ke-3.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana cara mendapatkan sertifikat kualitas?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Kakao dengan grade A+ dan skor di atas 9.0 dapat mendapatkan sertifikat kualitas premium. Dashboard kami memberikan rekomendasi real-time untuk mencapai standar tersebut. Hubungi tim kami untuk informasi lebih lanjut tentang proses sertifikasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Smart Cocoa Fermentation Monitor - Contact Center</p>
+            <p class="footer-note">Kami siap membantu Anda 24/7 melalui berbagai channel komunikasi</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formMessage = document.getElementById('formMessage');
+            formMessage.textContent = 'Pesan Anda telah dikirim! Kami akan meresponse dalam 24 jam.';
+            formMessage.className = 'form-message success';
+            this.reset();
+            setTimeout(() => {
+                formMessage.textContent = '';
+                formMessage.className = 'form-message';
+            }, 5000);
+        });
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const toggle = this.querySelector('.faq-toggle');
+                answer.classList.toggle('open');
+                toggle.textContent = answer.classList.contains('open') ? '−' : '+';
+            });
+        });
+    </script>
+</body>
+</html>

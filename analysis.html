@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Mendalam - Smart Cocoa Fermentation Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo-section">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='50' rx='35' ry='50' fill='%23D4A574'/%3E%3Cpath d='M35 30 Q50 20 65 30' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3Cpath d='M35 45 Q50 35 65 45' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3Cpath d='M35 60 Q50 50 65 60' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3C/svg%3E" alt="Logo" class="nav-logo">
+                    <span class="brand-name">SmartCocoa</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="analysis.html" class="nav-link active">Analisis</a></li>
+                    <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    <li><a href="about.html" class="nav-link">Tentang</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <header>
+            <div class="header-content">
+                <h1>Analisis Mendalam Fermentasi</h1>
+            </div>
+            <p class="subtitle">Studi Lanjutan Faktor-Faktor yang Mempengaruhi Kualitas Kakao</p>
+        </header>
+
+        <main>
+            <section class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Analisis Korelasi</h3>
+                    <p class="description">Korelasi antara suhu puncak dengan skor kualitas</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Data Statistik</h3>
+                    <p class="description">Ringkasan statistik dari seluruh proses fermentasi 7 hari</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Prediksi Kualitas</h3>
+                    <p class="description">Model prediktif untuk estimasi kualitas berdasarkan parameter</p>
+                </div>
+                <div class="analysis-card">
+                    <h3>Perbandingan Batch</h3>
+                    <p class="description">Analisis perbandingan antar batch fermentasi yang berbeda</p>
+                </div>
+            </section>
+
+            <section class="detailed-analysis">
+                <h2>Statistik Deskriptif Parameter Fermentasi</h2>
+                <div class="stats-table-container">
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Rata-rata</th>
+                                <th>Nilai Min</th>
+                                <th>Nilai Max</th>
+                                <th>Std Dev</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="status-optimal">
+                                <td><strong>Suhu Puncak (°C)</strong></td>
+                                <td>44.23</td>
+                                <td>32.1</td>
+                                <td>50.8</td>
+                                <td>7.45</td>
+                                <td><span class="status-badge optimal">Optimal</span></td>
+                            </tr>
+                            <tr class="status-optimal">
+                                <td><strong>Suhu Dasar (°C)</strong></td>
+                                <td>36.07</td>
+                                <td>28.5</td>
+                                <td>45.2</td>
+                                <td>5.89</td>
+                                <td><span class="status-badge optimal">Optimal</span></td>
+                            </tr>
+                            <tr class="status-warning">
+                                <td><strong>Lonjakan Suhu (°C)</strong></td>
+                                <td>6.43</td>
+                                <td>2.3</td>
+                                <td>13.95</td>
+                                <td>3.75</td>
+                                <td><span class="status-badge warning">Waspada</span></td>
+                            </tr>
+                            <tr class="status-optimal">
+                                <td><strong>Kelembaban (%)</strong></td>
+                                <td>80.15</td>
+                                <td>79.85</td>
+                                <td>80.54</td>
+                                <td>0.28</td>
+                                <td><span class="status-badge optimal">Optimal</span></td>
+                            </tr>
+                            <tr class="status-optimal">
+                                <td><strong>pH Level</strong></td>
+                                <td>5.84</td>
+                                <td>5.70</td>
+                                <td>5.95</td>
+                                <td>0.10</td>
+                                <td><span class="status-badge optimal">Optimal</span></td>
+                            </tr>
+                            <tr class="status-optimal">
+                                <td><strong>Oksigen (%)</strong></td>
+                                <td>20.02</td>
+                                <td>19.96</td>
+                                <td>20.09</td>
+                                <td>0.05</td>
+                                <td><span class="status-badge optimal">Optimal</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="daily-analysis">
+                <h2>Analisis Harian Kualitas Fermentasi</h2>
+                <div class="daily-grid">
+                    <div class="daily-card day-1">
+                        <div class="day-header">Hari 1</div>
+                        <div class="day-metric">
+                            <span class="metric-label">Suhu Puncak</span>
+                            <span class="metric-val">44.96°C</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Grade</span>
+                            <span class="metric-val">A+</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Skor</span>
+                            <span class="metric-val">9.1/10</span>
+                        </div>
+                        <p class="day-note">Fase inisiasi, aktivitas mikroba mulai meningkat</p>
+                    </div>
+
+                    <div class="daily-card day-2">
+                        <div class="day-header">Hari 2</div>
+                        <div class="day-metric">
+                            <span class="metric-label">Suhu Puncak</span>
+                            <span class="metric-val">48.51°C</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Grade</span>
+                            <span class="metric-val">A</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Skor</span>
+                            <span class="metric-val">9.0/10</span>
+                        </div>
+                        <p class="day-note">Aklimatisasi baik, pH mulai stabil</p>
+                    </div>
+
+                    <div class="daily-card day-3 critical">
+                        <div class="day-header">Hari 3 - KRITIS</div>
+                        <div class="day-metric">
+                            <span class="metric-label">Suhu Puncak</span>
+                            <span class="metric-val">55.36°C</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Grade</span>
+                            <span class="metric-val">B</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Skor</span>
+                            <span class="metric-val">7.1/10</span>
+                        </div>
+                        <p class="day-note">Lonjakan suhu paling tinggi (13.95°C) mempengaruhi kualitas</p>
+                    </div>
+
+                    <div class="daily-card day-4">
+                        <div class="day-header">Hari 4</div>
+                        <div class="day-metric">
+                            <span class="metric-label">Suhu Puncak</span>
+                            <span class="metric-val">52.76°C</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Grade</span>
+                            <span class="metric-val">A</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Skor</span>
+                            <span class="metric-val">8.1/10</span>
+                        </div>
+                        <p class="day-note">Pemulihan kualitas dimulai, lonjakan berkurang</p>
+                    </div>
+
+                    <div class="daily-card day-5">
+                        <div class="day-header">Hari 5</div>
+                        <div class="day-metric">
+                            <span class="metric-label">Suhu Puncak</span>
+                            <span class="metric-val">48.43°C</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Grade</span>
+                            <span class="metric-val">A</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Skor</span>
+                            <span class="metric-val">9.1/10</span>
+                        </div>
+                        <p class="day-note">Kualitas meningkat signifikan, stabilisasi parameter</p>
+                    </div>
+
+                    <div class="daily-card day-6">
+                        <div class="day-header">Hari 6</div>
+                        <div class="day-metric">
+                            <span class="metric-label">Suhu Puncak</span>
+                            <span class="metric-val">41.95°C</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Grade</span>
+                            <span class="metric-val">A+</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Skor</span>
+                            <span class="metric-val">9.1/10</span>
+                        </div>
+                        <p class="day-note">Kualitas mencapai puncak, parameter sangat stabil</p>
+                    </div>
+
+                    <div class="daily-card day-7">
+                        <div class="day-header">Hari 7</div>
+                        <div class="day-metric">
+                            <span class="metric-label">Suhu Puncak</span>
+                            <span class="metric-val">42.11°C</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Grade</span>
+                            <span class="metric-val">A+</span>
+                        </div>
+                        <div class="day-metric">
+                            <span class="metric-label">Skor</span>
+                            <span class="metric-val">9.1/10</span>
+                        </div>
+                        <p class="day-note">Fermentasi matang, siap untuk pengeringan</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="correlation-analysis">
+                <h2>Analisis Faktor Pendorong Kualitas</h2>
+                <div class="factors-grid">
+                    <div class="factor-card">
+                        <h4>Suhu</h4>
+                        <div class="factor-bar">
+                            <div class="factor-fill" style="width: 85%"></div>
+                        </div>
+                        <p class="factor-weight">Pengaruh: 85%</p>
+                        <p class="factor-description">Faktor terpenting dalam menentukan grade kakao. Lonjakan >6.4°C menurunkan kualitas</p>
+                    </div>
+
+                    <div class="factor-card">
+                        <h4>Kelembaban</h4>
+                        <div class="factor-bar">
+                            <div class="factor-fill" style="width: 60%"></div>
+                        </div>
+                        <p class="factor-weight">Pengaruh: 60%</p>
+                        <p class="factor-description">Kelembaban optimal 75-85% menjaga aktivitas mikroba yang sehat</p>
+                    </div>
+
+                    <div class="factor-card">
+                        <h4>pH Level</h4>
+                        <div class="factor-bar">
+                            <div class="factor-fill" style="width: 70%"></div>
+                        </div>
+                        <p class="factor-weight">Pengaruh: 70%</p>
+                        <p class="factor-description">pH 5.5-5.95 menghasilkan fermentasi optimal dan rasa berkualitas</p>
+                    </div>
+
+                    <div class="factor-card">
+                        <h4>Oksigen</h4>
+                        <div class="factor-bar">
+                            <div class="factor-fill" style="width: 50%"></div>
+                        </div>
+                        <p class="factor-weight">Pengaruh: 50%</p>
+                        <p class="factor-description">Sirkulasi udara 20% oksigen mendukung aerobic fermentation</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="key-findings">
+                <h2>Temuan Utama</h2>
+                <div class="findings-list">
+                    <div class="finding-item">
+                        <div class="finding-number">1</div>
+                        <div class="finding-content">
+                            <h4>Hari 3 adalah Titik Kritis</h4>
+                            <p>Lonjakan suhu terbesar terjadi pada hari ke-3 dengan peningkatan 13.95°C, mengakibatkan penurunan kualitas dari Grade A menjadi Grade B</p>
+                        </div>
+                    </div>
+
+                    <div class="finding-item">
+                        <div class="finding-number">2</div>
+                        <div class="finding-content">
+                            <h4>Fase Pemulihan Dimulai Hari 4</h4>
+                            <p>Setelah lonjakan di hari 3, kualitas mulai membaik di hari 4-5 menunjukkan sistem fermentasi mampu self-recover</p>
+                        </div>
+                    </div>
+
+                    <div class="finding-item">
+                        <div class="finding-number">3</div>
+                        <div class="finding-content">
+                            <h4>Puncak Kualitas di Hari 6</h4>
+                            <p>Grade A+ dicapai pada hari ke-6 dengan skor 9.1/10, menunjukkan fermentasi mencapai kondisi optimal</p>
+                        </div>
+                    </div>
+
+                    <div class="finding-item">
+                        <div class="finding-number">4</div>
+                        <div class="finding-content">
+                            <h4>Korelasi Negatif Lonjakan Suhu-Kualitas</h4>
+                            <p>Semakin besar lonjakan suhu dalam satu hari, semakin rendah skor kualitas hari tersebut (r = -0.87)</p>
+                        </div>
+                    </div>
+
+                    <div class="finding-item">
+                        <div class="finding-number">5</div>
+                        <div class="finding-content">
+                            <h4>Stabilitas Parameter Mendukung Kualitas</h4>
+                            <p>Kelembaban dan oksigen tetap stabil sepanjang proses, hanya suhu yang bervariasi signifikan</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Smart Cocoa Fermentation Monitor - Analysis Dashboard</p>
+            <p class="footer-note">Data Analysis & Insights | Detailed Fermentation Study</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="analysis.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cocoa Fermentation Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo-section">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='50' rx='35' ry='50' fill='%23D4A574'/%3E%3Cpath d='M35 30 Q50 20 65 30' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3Cpath d='M35 45 Q50 35 65 45' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3Cpath d='M35 60 Q50 50 65 60' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3C/svg%3E" alt="Logo" class="nav-logo">
+                    <span class="brand-name">SmartCocoa</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Dashboard</a></li>
+                    <li><a href="analysis.html" class="nav-link">Analisis</a></li>
+                    <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    <li><a href="about.html" class="nav-link">Tentang</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <header>
+            <div class="header-content">
+                <h1>Smart Cocoa Fermentation Monitor</h1>
+            </div>
+            <p class="subtitle">Analisis Lonjakan Suhu dan Kualitas Fermentasi Kakao</p>
+        </header>
+
+        <main>
+            <section class="summary-cards">
+                <div class="card highlight-card">
+                    <h3>Jawaban Utama</h3>
+                    <div class="answer-box">
+                        <p class="big-text">Hari ke-<span id="criticalDay">3</span></p>
+                        <p class="description">Menunjukkan lonjakan suhu terbesar yang menurunkan kualitas fermentasi</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Lonjakan Suhu Terbesar</h3>
+                    <p class="metric-value" id="maxSpike">~14°C</p>
+                    <p class="metric-label">Pada hari fermentasi ke-3</p>
+                </div>
+
+                <div class="card">
+                    <h3>Penurunan Kualitas</h3>
+                    <p class="metric-value">Signifikan</p>
+                    <p class="metric-label">Kualitas menurun dari hari ke-2</p>
+                </div>
+            </section>
+
+            <section class="current-readings">
+                <h2>Parameter Monitoring Real-time</h2>
+                <div class="readings-grid">
+                    <div class="reading-card" data-param="temperature">
+                        <div class="reading-icon">🌡️</div>
+                        <div class="reading-value" id="currentTemp">58.52°C</div>
+                        <div class="reading-label">Suhu Dasar</div>
+                        <div class="reading-status">Target: <span id="targetTemp">38.53°C</span></div>
+                    </div>
+                    <div class="reading-card" data-param="humidity">
+                        <div class="reading-icon">💧</div>
+                        <div class="reading-value" id="currentHumidity">80.10%</div>
+                        <div class="reading-label">Kelembaban</div>
+                        <div class="reading-status">Optimal</div>
+                    </div>
+                    <div class="reading-card" data-param="ph">
+                        <div class="reading-icon">🧪</div>
+                        <div class="reading-value" id="currentPH">5.87</div>
+                        <div class="reading-label">pH Level</div>
+                        <div class="reading-status">Sesuai Standar</div>
+                    </div>
+                    <div class="reading-card" data-param="oxygen">
+                        <div class="reading-icon">💨</div>
+                        <div class="reading-value" id="currentOxygen">20.03%</div>
+                        <div class="reading-label">Oksigen</div>
+                        <div class="reading-status">Normal</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="analysis-section">
+                <h2>Analisis Lonjakan Suhu Per Hari Fermentasi</h2>
+                <div class="chart-container">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+            </section>
+
+            <section class="quality-analysis">
+                <h2>Korelasi Suhu dan Kualitas</h2>
+                <div class="quality-grid">
+                    <div class="quality-card grade-a">
+                        <h4>Grade A</h4>
+                        <div class="quality-metrics">
+                            <div><strong>pH:</strong> <span class="metric-value-small">5.95</span></div>
+                            <div><strong>Kelembaban:</strong> <span class="metric-value-small">79.85%</span></div>
+                            <div><strong>Kelembaban Konten:</strong> <span class="metric-value-small">45.52%</span></div>
+                            <div><strong>Oksigen:</strong> <span class="metric-value-small">20.09%</span></div>
+                        </div>
+                    </div>
+                    <div class="quality-card grade-aplus">
+                        <h4>Grade A+</h4>
+                        <div class="quality-metrics">
+                            <div><strong>pH:</strong> <span class="metric-value-small">5.91</span></div>
+                            <div><strong>Kelembaban:</strong> <span class="metric-value-small">80.15%</span></div>
+                            <div><strong>Kelembaban Konten:</strong> <span class="metric-value-small">45%</span></div>
+                            <div><strong>Oksigen:</strong> <span class="metric-value-small">20.00%</span></div>
+                        </div>
+                    </div>
+                    <div class="quality-card grade-b">
+                        <h4>Grade B</h4>
+                        <div class="quality-metrics">
+                            <div><strong>pH:</strong> <span class="metric-value-small">5.70</span></div>
+                            <div><strong>Kelembaban:</strong> <span class="metric-value-small">80.54%</span></div>
+                            <div><strong>Kelembaban Konten:</strong> <span class="metric-value-small">47%</span></div>
+                            <div><strong>Oksigen:</strong> <span class="metric-value-small">19.96%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="spike-section">
+                <h2>Grafik Lonjakan Suhu per Hari</h2>
+                <div class="chart-container">
+                    <canvas id="spikeChart"></canvas>
+                </div>
+                <div class="insight-box">
+                    <h3>💡 Insight Penting</h3>
+                    <p><strong>Hari ke-3 menunjukkan lonjakan suhu terbesar (~14°C)</strong> yang berkorelasi dengan penurunan skor kualitas. Ini terjadi karena aktivitas mikroba yang sangat tinggi pada fase mid-fermentasi, menghasilkan panas metabolik yang berlebihan.</p>
+                    <p>Lonjakan suhu yang tidak terkontrol pada hari ke-3 dapat menyebabkan:</p>
+                    <ul>
+                        <li>Kematian mikroba yang berlebihan</li>
+                        <li>Perubahan pH yang tidak optimal</li>
+                        <li>Penurunan kualitas biji kakao</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="recommendations">
+                <h2>Rekomendasi Pengendalian</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <div class="rec-icon">🔄</div>
+                        <h4>Pembalikan Lebih Sering</h4>
+                        <p>Lakukan pembalikan biji pada hari ke-2 dan ke-3 untuk distribusi panas yang lebih merata</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-icon">🌡️</div>
+                        <h4>Monitoring Intensif</h4>
+                        <p>Pantau suhu setiap 2-3 jam pada hari ke-3 untuk deteksi dini lonjakan suhu</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-icon">💨</div>
+                        <h4>Ventilasi Optimal</h4>
+                        <p>Tingkatkan sirkulasi udara pada hari ke-3 untuk mengurangi akumulasi panas</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-icon">📊</div>
+                        <h4>Target Suhu</h4>
+                        <p>Jaga suhu maksimal 45-50°C pada hari ke-3 untuk kualitas optimal</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Smart Cocoa Fermentation Monitor - Data Analysis Dashboard</p>
+            <p class="footer-note">Sumber Data: Power BI Monitoring System | Terakhir diperbarui: <span id="lastUpdate"></span></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

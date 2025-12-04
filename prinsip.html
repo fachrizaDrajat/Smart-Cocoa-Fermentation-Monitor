@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prinsip Analisis - Flowchart</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .flowchart-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        .flowchart-box {
+            width: 48%;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        .flowchart-box img {
+            width: 100%;
+            max-width: 350px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px 0;
+            background: #eee;
+        }
+
+        @media screen and (max-width: 768px) {
+            .flowchart-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .flowchart-box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo-section">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='50' rx='35' ry='50' fill='%23D4A574'/%3E%3Cpath d='M35 30 Q50 20 65 30' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3Cpath d='M35 45 Q50 35 65 45' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3Cpath d='M35 60 Q50 50 65 60' stroke='%238B6F47' fill='none' stroke-width='2'/%3E%3C/svg%3E" class="nav-logo">
+                    <span class="brand-name">SmartCocoa</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="analysis.html">Analisis</a></li>
+                    <li><a href="prinsip.html" class="nav-link active">Prinsip</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header>
+            <h1>Prinsip Analisis Flowchart</h1>
+            <p class="subtitle">Visual Alur Metode & Analisis</p>
+        </header>
+
+        <main>
+            <div class="flowchart-section">
+                <div class="flowchart-box">
+                    <h2>Flowchart Metode</h2>
+                    <img src="flowchart.png" alt="Flowchart 1">
+                </div>
+
+                <div class="flowchart-box">
+                    <h2>Flowchart Analisis</h2>
+                    <img src="analisis.png" alt="Flowchart 2">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Smart Cocoa Fermentation Monitor - Prinsip Analisis</p>
+        </footer>
+
+    </div>
+</body>
+</html>
